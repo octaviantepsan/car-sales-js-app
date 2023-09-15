@@ -50,15 +50,6 @@ const marci = [
     }
 ]
 
-// < div class="articles" id = "articles" ></div >
-
-
-// <div class="anunt" id="anunt">
-//     <img class="carImage" src="../main/images/Dacia.jpg">
-//         <p class="carBrand"></p>
-// </div>
-
-
 function populateFilter() {
     if (document.getElementById("filter") !== null) {
         for (let i = 0; i < marci.length; i++) {
