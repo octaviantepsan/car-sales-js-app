@@ -12,11 +12,18 @@ body {
     width: 100%;
     position: sticky;
     top: 0;
+    border-bottom: 2px solid;
+    border-top: 2px solid;
 }
 
 .name {
-    font-size: 65px;
-    margin-left: 10px;
+    font-size:40px;
+    margin-left: 5px;
+    width: 100px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    font-family: fantasy;
 }
 
 .articles {
@@ -28,7 +35,7 @@ body {
     height: 100%;
 }
 
-.thumbnail {
+.anunt {
     height: 245px;
     width: 355px;
     background-color: #1373c9;
@@ -42,11 +49,14 @@ body {
     background-color: #aa6b1d;
     position: sticky;
     bottom: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 .year {
     text-align: center;
     font-size: 25px;
+    margin-top: 0;
 }
 
 .carImage {
@@ -59,6 +69,31 @@ body {
     text-align: center;
     font-size: 18px;
 }
+
+.filterBar {
+    width: 400px;
+    position: absolute;
+    top: 58px;
+    left: 142px;
+}
+
+.filterIndicator {
+    font-size: 20px;
+    font-family: math;
+}
+
+.filter {
+    width: 120px;
+    height:25px;
+    background-color: brown;
+    border: 1px solid black;
+    outline: none;
+}
+
+.filter:hover {
+    background-color:#C02F2F;
+}
+
 
 /* .relativeTest {
     width: 800px;
