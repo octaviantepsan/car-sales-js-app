@@ -18,7 +18,7 @@ body {
 
 .name {
     font-size:40px;
-    margin-left: 5px;
+    margin-left: 20px;
     width: 100px;
     position: absolute;
     top: -40px;
@@ -71,7 +71,7 @@ body {
 }
 
 .filterBar {
-    width: 400px;
+    width: 430px;
     position: absolute;
     top: 58px;
     left: 142px;
@@ -93,6 +93,23 @@ body {
 .filter:hover {
     background-color:#C02F2F;
 }
+
+.buttonWrapper {
+    float: right;
+}
+
+.clearFilters {
+    background-color: brown;
+    width: 90px;
+    height: 25px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.clearFilters:hover {
+    background-color: #C02F2F;
+}
+
 
 
 /* .relativeTest {
