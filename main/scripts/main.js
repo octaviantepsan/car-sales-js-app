@@ -83,16 +83,18 @@ function populateArticles() {
 }
 
 function showNotification(text, type) {
-    let $titleBar = document.getElementById("titleBar");
-    $titleBar.innerHTML += '<div class="notificationWrapper" id="notificationWrapper"><div class="notification" id="notification"></div></div>';
+    let $notificationWrapper = document.getElementById("notificationWrapper");
+    let uniqueIdentifier = Math.floor(Math.random() * 99999);
+    $notificationWrapper.innerHTML += `<div class="notification" id="notification-${uniqueIdentifier}"><p class="notificationText">${text}</p></div>`;
     if (type === "success") {
-        document.getElementById("notification").style.backgroundColor = "green";
+        document.getElementById(`notification-${uniqueIdentifier}`).style.backgroundColor = "green";
     }
     else if (type === "error") {
-        document.getElementById("notification").style.backgroundColor = "red";
+        document.getElementById(`notification-${uniqueIdentifier}`).style.backgroundColor = "red";
     }
-    document.getElementById("notification").innerHTML = `<p class="notificationText">${text}</p>`;
-
+    setTimeout(() => {
+        document.getElementById(`notification-${uniqueIdentifier}`).style.display = "none";
+    }, 3000);
 }
 
 function createEventListeners() {
@@ -101,6 +103,7 @@ function createEventListeners() {
     let $clearFilters = document.getElementById("clearFilters");
     if ($filter) {
         $filter.addEventListener("change", function (event) {
+            console.log(event.target.value);
             if (event.target.value) {
                 $articles.innerHTML = "";
                 for (let i = 0; i < anunturi.length; i++) {
@@ -121,14 +124,10 @@ function createEventListeners() {
         $articles.innerHTML = "";
         populateArticles();
         $filter.value = "emptyOption";
-        showNotification("Filters were reset" ,"success");
+        showNotification("Filters were reset", "success");
     })
 }
-
 
 populateFilter();
 populateArticles();
 createEventListeners();
-
-
-//document.getElementById("clearFilters").style.backgroundColor = "blue"
