@@ -8,11 +8,11 @@ const anunturi = [
         url_imagine: "../main/images/BMW.jpg"
     },
     {
-        marca_masina: "Dacia",
+        marca_masina: "Mitsubishi",
         url_imagine: "../main/images/Mitsubishi1.jpg"
     },
     {
-        marca_masina: "Dacia",
+        marca_masina: "Renault",
         url_imagine: "../main/images/Renault.jpg"
     },
     {
@@ -65,8 +65,8 @@ const marci = [
 ];
 
 function populateFilter() {
-    if (document.getElementById("filter") !== null) {
-        document.getElementById("filter").innerHTML += "<option disabled selected></option>";
+    if (document.getElementById("filter")) {
+        document.getElementById("filter").innerHTML += "<option disabled selected id='emptyOption'>Select...</option>";
         for (let i = 0; i < marci.length; i++) {
             document.getElementById("filter").innerHTML += `<option>${marci[i].marca_masina}</option>`;
         }
@@ -74,7 +74,7 @@ function populateFilter() {
 }
 
 function populateArticles() {
-    if (document.getElementById("articles") !== null) {
+    if (document.getElementById("articles")) {
         for (let i = 0; i < anunturi.length; i++) {
             document.getElementById("articles").innerHTML +=
                 `<div class="anunt"><img class="carImage" src="${anunturi[i].url_imagine}"><p class="carBrand">${anunturi[i].marca_masina}</p></div>`;
@@ -86,9 +86,9 @@ function createEventListeners() {
     let $filter = document.getElementById("filter");
     let $articles = document.getElementById("articles");
     let $clearFilters = document.getElementById("clearFilters");
-    if ($filter !== null) {
+    if ($filter) {
         $filter.addEventListener("change", function (event) {
-            if (event.target.value !== null) {
+            if (event.target.value) {
                 $articles.innerHTML = "";
                 for (let i = 0; i < anunturi.length; i++) {
                     if (anunturi[i].marca_masina === event.target.value) {
@@ -100,7 +100,7 @@ function createEventListeners() {
                 if ($articles.innerHTML === "") {
                     alert(`There are no cars listed as ${event.target.value}.`);
                     populateArticles();
-                    event.target.value = "";
+                    $filter.value = "emptyOption";
                 }
             }
         });
@@ -108,7 +108,7 @@ function createEventListeners() {
     $clearFilters.addEventListener("click", function(event) {
         $articles.innerHTML = "";
         populateArticles();
-        event.target.value = "";
+        $filter.value = "emptyOption";
         alert("Filters were reset");
     })
 }
@@ -117,3 +117,6 @@ function createEventListeners() {
 populateFilter();
 populateArticles();
 createEventListeners();
+
+
+//document.getElementById("clearFilters").style.backgroundColor = "blue"
