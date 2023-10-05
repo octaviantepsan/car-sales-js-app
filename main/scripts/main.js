@@ -82,6 +82,19 @@ function populateArticles() {
     }
 }
 
+function showNotification(text, type) {
+    let $titleBar = document.getElementById("titleBar");
+    $titleBar.innerHTML += '<div class="notificationWrapper" id="notificationWrapper"><div class="notification" id="notification"></div></div>';
+    if (type === "success") {
+        document.getElementById("notification").style.backgroundColor = "green";
+    }
+    else if (type === "error") {
+        document.getElementById("notification").style.backgroundColor = "red";
+    }
+    document.getElementById("notification").innerHTML = `<p class="notificationText">${text}</p>`;
+
+}
+
 function createEventListeners() {
     let $filter = document.getElementById("filter");
     let $articles = document.getElementById("articles");
@@ -95,21 +108,20 @@ function createEventListeners() {
                         $articles.innerHTML +=
                             `<div class="anunt"><img class="carImage" src="${anunturi[i].url_imagine}"><p class="carBrand">${anunturi[i].marca_masina}</p></div>`;
                     }
-                    console.log($articles.innerHTML);
                 }
                 if ($articles.innerHTML === "") {
-                    alert(`There are no cars listed as ${event.target.value}.`);
                     populateArticles();
                     $filter.value = "emptyOption";
+                    showNotification(`There are no cars listed as ${event.target.value}.`, "error");
                 }
             }
         });
     }
-    $clearFilters.addEventListener("click", function(event) {
+    $clearFilters.addEventListener("click", function () {
         $articles.innerHTML = "";
         populateArticles();
         $filter.value = "emptyOption";
-        alert("Filters were reset");
+        showNotification("Filters were reset" ,"success");
     })
 }
 
