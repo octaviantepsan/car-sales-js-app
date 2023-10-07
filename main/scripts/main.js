@@ -66,9 +66,9 @@ const marci = [
 
 function populateFilter() {
     if (document.getElementById("filter")) {
-        document.getElementById("filter").innerHTML += "<option disabled selected id='emptyOption'>Select...</option>";
+        document.getElementById("filter").innerHTML += "<option class='selectedCar' disabled selected id='emptyOption'>Select...</option>";
         for (let i = 0; i < marci.length; i++) {
-            document.getElementById("filter").innerHTML += `<option>${marci[i].marca_masina}</option>`;
+            document.getElementById("filter").innerHTML += `<option class="selectedCar">${marci[i].marca_masina}</option>`;
         }
     }
 }
@@ -87,10 +87,10 @@ function showNotification(text, type) {
     let uniqueIdentifier = Math.floor(Math.random() * 99999);
     $notificationWrapper.innerHTML += `<div class="notification" id="notification-${uniqueIdentifier}"><p class="notificationText">${text}</p></div>`;
     if (type === "success") {
-        document.getElementById(`notification-${uniqueIdentifier}`).style.backgroundColor = "green";
+        document.getElementById(`notification-${uniqueIdentifier}`).style.backgroundColor = "#357e37";
     }
     else if (type === "error") {
-        document.getElementById(`notification-${uniqueIdentifier}`).style.backgroundColor = "red";
+        document.getElementById(`notification-${uniqueIdentifier}`).style.backgroundColor = "#bc4749";
     }
     setTimeout(() => {
         document.getElementById(`notification-${uniqueIdentifier}`).style.display = "none";
@@ -103,7 +103,6 @@ function createEventListeners() {
     let $clearFilters = document.getElementById("clearFilters");
     if ($filter) {
         $filter.addEventListener("change", function (event) {
-            console.log(event.target.value);
             if (event.target.value) {
                 $articles.innerHTML = "";
                 for (let i = 0; i < anunturi.length; i++) {
@@ -114,8 +113,9 @@ function createEventListeners() {
                 }
                 if ($articles.innerHTML === "") {
                     populateArticles();
-                    $filter.value = "emptyOption";
+                    console.log(event.target.value);
                     showNotification(`There are no cars listed as ${event.target.value}.`, "error");
+                    $filter.value = "emptyOption";
                 }
             }
         });

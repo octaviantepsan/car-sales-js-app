@@ -8,22 +8,23 @@ body {
 }
 
 .titleBar {
-    background-color: #aa6b1d;
+    background-color: #dda15e;
     height: 85px;
     width: 100%;
     position: sticky;
-    top: 0;
-    border-bottom: 2px solid;
-    border-top: 2px solid;
+    top: 0px;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    text-align: center;
+}
+
+.nameWrapper {
+    font-size: 35px;
+    margin-top: -30px;
 }
 
 .name {
-    font-size:40px;
-    margin-left: 20px;
-    width: 100px;
-    position: absolute;
-    top: -40px;
-    left: 0;
+    font-weight: 500px;
 }
 
 .articles {
@@ -40,20 +41,22 @@ body {
 .anunt {
     height: 245px;
     width: 355px;
-    background-color: #1373c9;
+    background-color: #c6ac8f;
     margin-left: 110px;
     margin-right: 110px;
     margin-bottom: 50px;
+    border: 1px solid black;
+    border-radius: 3px
 }
 
 .footer {
     height: 30px;
     width: 100%;
-    background-color: #aa6b1d;
+    background-color: #dda15e;
     position: sticky;
     bottom: 0;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .year {
@@ -71,13 +74,14 @@ body {
 .carBrand {
     text-align: center;
     font-size: 18px;
+    margin-top: 13px;
 }
 
 .filterBar {
-    width: 430px;
+    width: 475px;
     position: absolute;
-    top: 58px;
-    left: 142px;
+    top: 50px;
+    left: 720px
 }
 
 .filterIndicator {
@@ -85,15 +89,21 @@ body {
 }
 
 .filter {
-    width: 120px;
-    height:25px;
-    background-color: brown;
+    width: 130px;
+    height: 25px;
+    background-color: rgb(182, 182, 182);
     border: 1px solid black;
+    border-radius: 3px;
     outline: none;
+    font-size: 15px;
+}
+
+.selectedCar {
+    background-color: #4CAF50;
 }
 
 .filter:hover {
-    background-color:#C02F2F;
+    background-color: #3e8e41;
 }
 
 .buttonWrapper {
@@ -101,15 +111,28 @@ body {
 }
 
 .clearFilters {
-    background-color: brown;
-    width: 90px;
-    height: 25px;
-    border: 1px solid black;
+    display: inline-block;
+    padding: 3px 18px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
     outline: none;
+    color: black;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px #999;
 }
 
 .clearFilters:hover {
-    background-color: #C02F2F;
+    background-color: #3e8e41;
+}
+
+.clearFilters:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
 }
 
 .notificationWrapper {
@@ -118,7 +141,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-
+    /* column-rule-color: #fc3336; */
 }
 
 .notification {
@@ -128,10 +151,12 @@ body {
     border-radius: 2px;
     border: 1px solid darkgreen;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .notificationText {
-    margin-left: 1rem;
+    margin-top: 35px;
+    font-size: 18px;
 }
 
 /* .relativeTest {
