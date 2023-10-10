@@ -31,18 +31,18 @@ body {
     display: flex;
     justify-content: normal;
     flex-wrap: wrap;
-    margin: 2rem;
+    /* margin: 2rem; */
     max-width: 100vw;
     height: 100%;
-    margin-left: 6rem;
+    margin-left: 120px;
     margin-top: 6rem;
 }
 
 .anunt {
-    height: 245px;
-    width: 355px;
+    height: 250px;
+    width: 455px;
     background-color: #c6ac8f;
-    margin-left: 110px;
+    margin-left: 30px;
     margin-right: 110px;
     margin-bottom: 50px;
     border: 1px solid black;
@@ -67,8 +67,8 @@ body {
 
 .carImage {
     height: 200px;
-    width: 355px;
-    object-fit: contain;
+    width: 100%;
+    object-fit: cover;
 }
 
 .carBrand {
