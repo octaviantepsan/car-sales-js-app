@@ -113,7 +113,6 @@ function createEventListeners() {
                 }
                 if ($articles.innerHTML === "") {
                     populateArticles();
-                    console.log(event.target.value);
                     showNotification(`There are no cars listed as ${event.target.value}.`, "error");
                     $filter.value = "emptyOption";
                 }
