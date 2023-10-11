@@ -77,7 +77,7 @@ function populateArticles() {
     if (document.getElementById("articles")) {
         for (let i = 0; i < anunturi.length; i++) {
             document.getElementById("articles").innerHTML +=
-                `<div class="anunt"><img class="carImage" src="${anunturi[i].url_imagine}"><p class="carBrand">${anunturi[i].marca_masina}</p></div>`;
+                `<div class="anunt" id="anunt"><img class="carImage" src="${anunturi[i].url_imagine}"><p class="carBrand">${anunturi[i].marca_masina}</p></div>`;
         }
     }
 }
@@ -101,6 +101,7 @@ function createEventListeners() {
     let $filter = document.getElementById("filter");
     let $articles = document.getElementById("articles");
     let $clearFilters = document.getElementById("clearFilters");
+    let $anunt = document.getElementById("anunt");
     if ($filter) {
         $filter.addEventListener("change", function (event) {
             if (event.target.value) {
@@ -124,6 +125,10 @@ function createEventListeners() {
         populateArticles();
         $filter.value = "emptyOption";
         showNotification("Filters were reset", "success");
+    })
+
+    $anunt.addEventListener("click", function() {
+        
     })
 }
 

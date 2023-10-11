@@ -46,7 +46,8 @@ body {
     margin-right: 110px;
     margin-bottom: 50px;
     border: 1px solid black;
-    border-radius: 3px
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .footer {
