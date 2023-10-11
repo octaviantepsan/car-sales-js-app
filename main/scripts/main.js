@@ -1,3 +1,8 @@
+const redirectUrls = {
+    index: "file:///D:/OCTAVIAN/github/firstrepo/main/index.html",
+    listing_page: "file:///D:/OCTAVIAN/github/firstrepo/main/listing-page.html"
+};
+
 const anunturi = [
     {
         marca_masina: "Dacia",
@@ -64,6 +69,8 @@ const marci = [
     }
 ];
 
+let currentListingsOnPage = [];
+
 function populateFilter() {
     if (document.getElementById("filter")) {
         document.getElementById("filter").innerHTML += "<option class='selectedCar' disabled selected id='emptyOption'>Select...</option>";
@@ -76,8 +83,10 @@ function populateFilter() {
 function populateArticles() {
     if (document.getElementById("articles")) {
         for (let i = 0; i < anunturi.length; i++) {
+            let uniqueIdentifier = Math.floor(Math.random() * 99999);
             document.getElementById("articles").innerHTML +=
-                `<div class="anunt" id="anunt"><img class="carImage" src="${anunturi[i].url_imagine}"><p class="carBrand">${anunturi[i].marca_masina}</p></div>`;
+                `<div class="anunt" id="anunt-${uniqueIdentifier}"><img class="carImage" src="${anunturi[i].url_imagine}"><p class="carBrand">${anunturi[i].marca_masina}</p></div>`;
+            currentListingsOnPage.push(`anunt-${uniqueIdentifier}`);    
         }
     }
 }
@@ -101,7 +110,6 @@ function createEventListeners() {
     let $filter = document.getElementById("filter");
     let $articles = document.getElementById("articles");
     let $clearFilters = document.getElementById("clearFilters");
-    let $anunt = document.getElementById("anunt");
     if ($filter) {
         $filter.addEventListener("change", function (event) {
             if (event.target.value) {
@@ -125,11 +133,19 @@ function createEventListeners() {
         populateArticles();
         $filter.value = "emptyOption";
         showNotification("Filters were reset", "success");
-    })
-
-    $anunt.addEventListener("click", function() {
-        
-    })
+    });
+    for(let i = 0; i < currentListingsOnPage.length; i++) {
+        let $anunt = document.getElementById(currentListingsOnPage[i]);
+        let test = {
+            name: "dacia",
+            year: 2010
+        };
+        $anunt.addEventListener("click", function() {
+            let stringifiedObject = JSON.stringify(test);
+            window.sessionStorage.setItem("listingData", stringifiedObject);
+            window.location.href = redirectUrls.listing_page;
+        });
+    }
 }
 
 populateFilter();
