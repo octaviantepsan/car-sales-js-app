@@ -1,74 +1,3 @@
-const redirectUrls = {
-    index: "file:///D:/OCTAVIAN/github/firstrepo/main/index.html",
-    listing_page: "file:///D:/OCTAVIAN/github/firstrepo/main/listing-page.html"
-};
-
-const anunturi = [
-    {
-        marca_masina: "Dacia",
-        url_imagine: "../main/images/Dacia.jpg"
-    },
-    {
-        marca_masina: "Dacia",
-        url_imagine: "../main/images/BMW.jpg"
-    },
-    {
-        marca_masina: "Mitsubishi",
-        url_imagine: "../main/images/Mitsubishi1.jpg"
-    },
-    {
-        marca_masina: "Renault",
-        url_imagine: "../main/images/Renault.jpg"
-    },
-    {
-        marca_masina: "Lamborghini",
-        url_imagine: "../main/images/Lamborghini.jpg"
-    },
-    {
-        marca_masina: "Ford",
-        url_imagine: "../main/images/Ford.jpg"
-    },
-    {
-        marca_masina: "Honda",
-        url_imagine: "../main/images/Honda.jpg"
-    },
-    {
-        marca_masina: "BMW",
-        url_imagine: "../main/images/BMW2.jpg"
-    },
-    {
-        marca_masina: "Honda",
-        url_imagine: "../main/images/Honda.jpg"
-    },
-];
-
-const marci = [
-    {
-        marca_masina: "Dacia",
-    },
-    {
-        marca_masina: "BMW",
-    },
-    {
-        marca_masina: "Mitsubishi",
-    },
-    {
-        marca_masina: "Renault",
-    },
-    {
-        marca_masina: "Lamborghini",
-    },
-    {
-        marca_masina: "Ford",
-    },
-    {
-        marca_masina: "Honda",
-    },
-    {
-        marca_masina: "Nissan",
-    }
-];
-
 let currentListingsOnPage = [];
 
 function populateFilter() {
@@ -85,7 +14,7 @@ function populateArticles() {
         for (let i = 0; i < anunturi.length; i++) {
             let uniqueIdentifier = Math.floor(Math.random() * 99999);
             document.getElementById("articles").innerHTML +=
-                `<div class="anunt" id="anunt-${uniqueIdentifier}"><img class="carImage" src="${anunturi[i].url_imagine}"><p class="carBrand">${anunturi[i].marca_masina}</p></div>`;
+                `<div class="anunt" id="anunt-${uniqueIdentifier}"><span class="objectId" id="objectId">${anunturi[i].objectId}</span><img class="carImage" src="${anunturi[i].url_imagine}"><p class="carBrand">${anunturi[i].marca_masina}</p></div>`;
             currentListingsOnPage.push(`anunt-${uniqueIdentifier}`);    
         }
     }
@@ -136,12 +65,11 @@ function createEventListeners() {
     });
     for(let i = 0; i < currentListingsOnPage.length; i++) {
         let $anunt = document.getElementById(currentListingsOnPage[i]);
-        let test = {
-            name: "dacia",
-            year: 2010
-        };
+        let anuntObjectId = $anunt.querySelector("#objectId").innerHTML; //cauta in parintele $anunt, copilul cu id-ul "objectId"
+        let anuntObject = anunturi.find(anunt => anunt.objectId == anuntObjectId); //gaseste "anunt" care indeplineste conditia anunt.objectId == anuntObjectId
+        
         $anunt.addEventListener("click", function() {
-            let stringifiedObject = JSON.stringify(test);
+            let stringifiedObject = JSON.stringify(anuntObject);
             window.sessionStorage.setItem("listingData", stringifiedObject);
             window.location.href = redirectUrls.listing_page;
         });

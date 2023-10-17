@@ -160,6 +160,10 @@ body {
     font-size: 18px;
 }
 
+.objectId {
+    display: none;
+}
+
 /* .relativeTest {
     width: 800px;
     height: 400px;
