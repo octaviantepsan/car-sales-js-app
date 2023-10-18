@@ -1,4 +1,41 @@
-.placeHolder {
+body {
+    background-color: #d4d4d4;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.listingInformation {
+    display: flex;
+    justify-content: normal;
     max-width: 100vw;
-    height: 100%;
+    height: 100vh;
+    margin-left: 120px;
+    margin-top: 6rem;
+}
+
+.imagesSlideShow {
+    width: 600px;
+    height: 550px;
+    background-color: #dda15e;
+    margin-left: 180px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.carInformation {
+    width: 35rem;
+    height: 550px;
+    margin-left: 125px;
+}
+
+.anuntTitlu {
+    background-color: #dda15e;
+    width: 35rem;
+    height: 4rem;
+    border: 1px solid black;
+    border-radius: 3px;
 }

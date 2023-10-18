@@ -14,7 +14,7 @@ function populateArticles() {
         for (let i = 0; i < anunturi.length; i++) {
             let uniqueIdentifier = Math.floor(Math.random() * 99999);
             document.getElementById("articles").innerHTML +=
-                `<div class="anunt" id="anunt-${uniqueIdentifier}"><span class="objectId" id="objectId">${anunturi[i].objectId}</span><img class="carImage" src="${anunturi[i].url_imagine}"><p class="carBrand">${anunturi[i].marca_masina}</p></div>`;
+                `<div class="anunt" id="anunt-${uniqueIdentifier}"><span class="objectId" id="objectId">${anunturi[i].objectId}</span><img class="carImage" src="${anunturi[i].promo_image}"><p class="carBrand">${anunturi[i].marca_masina}</p></div>`;
             currentListingsOnPage.push(`anunt-${uniqueIdentifier}`);    
         }
     }
@@ -46,7 +46,7 @@ function createEventListeners() {
                 for (let i = 0; i < anunturi.length; i++) {
                     if (anunturi[i].marca_masina === event.target.value) {
                         $articles.innerHTML +=
-                            `<div class="anunt"><img class="carImage" src="${anunturi[i].url_imagine}"><p class="carBrand">${anunturi[i].marca_masina}</p></div>`;
+                            `<div class="anunt"><img class="carImage" src="${anunturi[i].promo_image}"><p class="carBrand">${anunturi[i].marca_masina}</p></div>`;
                     }
                 }
                 if ($articles.innerHTML === "") {
