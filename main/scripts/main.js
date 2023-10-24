@@ -26,9 +26,12 @@ function showNotification(text, type) {
     $notificationWrapper.innerHTML += `<div class="notification" id="notification-${uniqueIdentifier}"><p class="notificationText">${text}</p></div>`;
     if (type === "success") {
         document.getElementById(`notification-${uniqueIdentifier}`).style.backgroundColor = "#357e37";
+        document.getElementById(`notification-${uniqueIdentifier}`).style.border = "1px solid darkgreen";
     }
     else if (type === "error") {
         document.getElementById(`notification-${uniqueIdentifier}`).style.backgroundColor = "#bc4749";
+        document.getElementById(`notification-${uniqueIdentifier}`).style.border = "1px solid #aa3537";
+        
     }
     setTimeout(() => {
         document.getElementById(`notification-${uniqueIdentifier}`).style.display = "none";

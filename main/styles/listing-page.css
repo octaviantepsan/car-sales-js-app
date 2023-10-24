@@ -19,7 +19,7 @@ body {
 
 .imagesSlideShow {
     width: 600px;
-    height: 550px;
+    height: 615px;
     background-color: #dda15e;
     margin-left: 180px;
     border: 1px solid black;
@@ -28,7 +28,7 @@ body {
 
 .carInformation {
     width: 35rem;
-    height: 550px;
+    height: 615px;
     margin-left: 125px;
 }
 
@@ -38,4 +38,61 @@ body {
     height: 4rem;
     border: 1px solid black;
     border-radius: 3px;
+    text-align: center;
+}
+
+.anuntDescriere {
+    background-color: #dda15e;
+    width: 35rem;
+    height: 17rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top: 2rem;
+}
+
+.anuntSpecificatii {
+    background-color: #dda15e;
+    width: 35rem;
+    height: 13rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top: 2rem;
+}
+
+.anuntTitluText {
+    font-size: 17px;
+    color: black;
+}
+
+.anuntDescriereText {
+    font-size: 17px;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.specificatii {
+    border-spacing: 1rem;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.specificatiiTitle {
+    font-size: 20px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* .specs {
+    margin
+} */
+
+.typeOfSpecs1 {
+    padding-left: 110px;
+
+}
+
+.typeOfSpecs2 {
+    padding-left: 105px;
+
 }
