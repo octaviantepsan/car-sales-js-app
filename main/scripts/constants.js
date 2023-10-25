@@ -6,15 +6,17 @@ const redirectUrls = {
 const anunturi = [
     {
         objectId: 1,
-        anunt_titlu:"",
+        anunt_titlu:"Lorem Ipsum is simply dummy text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         anunt_descriere:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        anunt_imagini: [],
-        promo_image:"../main/images/Dacia.jpg",
+        anunt_imagini: ["../main/images/BMW1.jpg", "../main/images/BMW2.jpg", "../main/images/BMW3.jpg"],
+        promo_image:"../main/images/BMW2.jpg",
+        marca_masina: "BMW",
         year: 2016,
         price: 10000,
         km: 250000,
         engine_displacement: 1333,
-        power: 160
+        power: 160,
+        phone_number: "0755667899"
     },
     {
         objectId: 2,

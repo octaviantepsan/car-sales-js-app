@@ -17,47 +17,68 @@
         </div>
     </div>
 
+    <div class="returnbuttonWrapper" id="returnbuttonWrapper">
+        <button class="returnButton" id="returnButton">
+            &lt; Return
+        </button>
+    </div>
+
     <div class="listingInformation" id="listingInformation">
-        <div class="imagesSlideShow"></div>
+        <div class="imagesSlideShow">
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img class="imageOfSlide" id="imageOfSlide1" src=" ">
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="imageOfSlide" id="imageOfSlide2" src=" ">
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="imageOfSlide" id="imageOfSlide3" src=" ">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+        </div>
         <div class="carInformation">
             <div class="anuntTitlu">
-                <p class="anuntTitluText">Lorem Ipsum is simply dummy text</p>
+                <p class="anuntTitluText" id="anuntTitluText"></p>
             </div>
             <div class="anuntDescriere">
-                <p class="anuntDescriereText">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
+                <p class="anuntDescriereText" id="anuntDescriereText"></p>
             </div>
             <div class="anuntSpecificatii">
-                <div class="specificatiiTitle">Specificatii</div>
-                <table class="specificatii">
+                <div class="specificatiiTitle">Specifications</div>
+                <table class="specificatii" id="specificatii">
                     <tr class="specs">
-                        <td class="typeOfSpecs1">Brand:</td>
-                        <td class="typeOfSpecs2">Displacement:</td>
+                        <td class="typeOfSpecs1" id="Brand">Brand: </td>
+                        <td class="typeOfSpecs2" id="Displacement">Displacement: </td>
                     </tr>
                     <tr class="specs">
-                        <td class="typeOfSpecs1">Year:</td>
-                        <td class="typeOfSpecs2">Power:</td>
+                        <td class="typeOfSpecs1" id="Year">Year: </td>
+                        <td class="typeOfSpecs2" id="Power">Power: </td>
                     </tr>
                     <tr class="specs">
-                        <td class="typeOfSpecs1">Mileage:</td>
-                        <td class="typeOfSpecs2">Phone number:</td>
+                        <td class="typeOfSpecs1" id="Mileage">Mileage: </td>
+                        <td class="typeOfSpecs2" id="Phone number">Phone number: </td>
                     </tr>
                 </table>
             </div>
-            
+
         </div>
-        
+
     </div>
 
     <div class="footer">
         <p class="year">2023</p>
 
+        <script src="../main/scripts/constants.js"></script>
         <script src="../main/scripts/listing-page.js"></script>
     </div>
 

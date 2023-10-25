@@ -17,24 +17,15 @@ body {
     margin-top: 6rem;
 }
 
-.imagesSlideShow {
-    width: 600px;
-    height: 615px;
-    background-color: #dda15e;
-    margin-left: 180px;
-    border: 1px solid black;
-    border-radius: 3px;
-}
-
 .carInformation {
-    width: 35rem;
+    width: 45rem;
     height: 615px;
-    margin-left: 125px;
+    margin-left: 8rem;
 }
 
 .anuntTitlu {
     background-color: #dda15e;
-    width: 35rem;
+    width: 100%;
     height: 4rem;
     border: 1px solid black;
     border-radius: 3px;
@@ -43,7 +34,7 @@ body {
 
 .anuntDescriere {
     background-color: #dda15e;
-    width: 35rem;
+    width: 100%;
     height: 17rem;
     border: 1px solid black;
     border-radius: 3px;
@@ -52,7 +43,7 @@ body {
 
 .anuntSpecificatii {
     background-color: #dda15e;
-    width: 35rem;
+    width: 100%;
     height: 13rem;
     border: 1px solid black;
     border-radius: 3px;
@@ -83,16 +74,117 @@ body {
     text-align: center;
 }
 
-/* .specs {
-    margin
-} */
-
 .typeOfSpecs1 {
     padding-left: 110px;
-
 }
 
 .typeOfSpecs2 {
     padding-left: 105px;
+}
 
+.imagesSlideShow {
+    width: 45rem;
+    height: 615px;
+    background-color: black;
+    margin-left: 4rem;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.imageOfSlide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.listingInfo {
+    color: #b64142;
+    font-weight: bold;
+}
+
+.returnButton {
+    display: inline-block;
+    padding: 3px 18px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px #999;
+    width: 100%;
+    height: 100%;
+}
+
+.returnButton:hover {
+    background-color: #8ca795;
+}
+
+.returnButton:active {
+    background-color: #8ca795;
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+}
+
+.returnbuttonWrapper {
+    width: 10rem;
+    height: 5rem;
+    position: absolute;
+    top: 93px;
+    left: 10px;
 }
