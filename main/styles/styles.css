@@ -31,7 +31,6 @@ body {
     display: flex;
     justify-content: normal;
     flex-wrap: wrap;
-    /* margin: 2rem; */
     max-width: 100vw;
     height: 100%;
     margin-left: 120px;
@@ -67,7 +66,7 @@ body {
 }
 
 .carImage {
-    height: 200px;
+    height: 220px;
     width: 100%;
     object-fit: cover;
 }
@@ -75,7 +74,7 @@ body {
 .carBrand {
     text-align: center;
     font-size: 18px;
-    margin-top: 13px;
+    margin-top: 6px;
 }
 
 .filterBar {
@@ -92,7 +91,7 @@ body {
 .filter {
     width: 130px;
     height: 25px;
-    background-color: rgb(182, 182, 182);
+    background-color: white;
     border: 1px solid black;
     border-radius: 3px;
     outline: none;
@@ -100,11 +99,15 @@ body {
 }
 
 .selectedCar {
-    background-color: #4CAF50;
+    background-color: #ebebeb;
+}
+
+.selectedCar:hover {
+    background-color: #ebebeb;
 }
 
 .filter:hover {
-    background-color: #3e8e41;
+    background-color: #ebebeb;
 }
 
 .buttonWrapper {
@@ -120,18 +123,18 @@ body {
     text-decoration: none;
     outline: none;
     color: black;
-    background-color: #4CAF50;
+    background-color: white;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 2px #999;
+    box-shadow: 0 3px #999;
 }
 
 .clearFilters:hover {
-    background-color: #3e8e41;
+    background-color: #ebebeb;
 }
 
 .clearFilters:active {
-    background-color: #3e8e41;
+    background-color: #ebebeb;
     box-shadow: 0 5px #666;
     transform: translateY(2px);
 }

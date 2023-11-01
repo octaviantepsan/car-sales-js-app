@@ -70,6 +70,11 @@ function createEventListeners() {
     })
 }
 
-createEventListeners();
-showInformation();
-showSlides(slideIndex);
+if (listingData) {
+    createEventListeners();
+    showInformation();
+    showSlides(slideIndex);
+}
+else {
+    window.location.href = redirectUrls.error_page;
+}

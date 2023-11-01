@@ -1,0 +1,11 @@
+.filler {
+    max-width: 100vw;
+    height: 100%;
+    margin-top: 16rem;
+    text-align: center;
+}
+
+.redirect {
+    font-size: 25px;
+    margin-top: -15px;
+}

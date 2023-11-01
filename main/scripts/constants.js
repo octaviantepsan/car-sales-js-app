@@ -1,85 +1,171 @@
 const redirectUrls = {
     index: "file:///D:/OCTAVIAN/github/firstrepo/main/index.html",
-    listing_page: "file:///D:/OCTAVIAN/github/firstrepo/main/listing-page.html"
+    listing_page: "file:///D:/OCTAVIAN/github/firstrepo/main/listing-page.html",
+    error_page: "file:///D:/OCTAVIAN/github/firstrepo/main/error-page.html"
 };
 
 const anunturi = [
     {
         objectId: 1,
-        anunt_titlu:"Lorem Ipsum is simply dummy text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-        anunt_descriere:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        anunt_titlu: "Lorem Ipsum is simply dummy text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        anunt_descriere: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
         anunt_imagini: ["../main/images/BMW1.jpg", "../main/images/BMW2.jpg", "../main/images/BMW3.jpg"],
-        promo_image:"../main/images/BMW2.jpg",
+        promo_image: "../main/images/BMW2.jpg",
         marca_masina: "BMW",
         year: 2016,
-        price: 10000,
-        km: 250000,
-        engine_displacement: 1333,
-        power: 160,
-        phone_number: "0755667899"
+        price: 29990,
+        km: 215100,
+        engine_displacement: 2993,
+        power: 265,
+        phone_number: "0755667899",
+        location: "Otopeni, Romania",
+        fakeDistanceFromUser: "236km",
+        lastUpdatedDate: "1 November 2023",
+        negotiable: "true"
     },
     {
         objectId: 2,
+        anunt_titlu: "Lorem Ipsum is simply dummy text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        anunt_descriere: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        anunt_imagini: ["../main/images/Dacia1.jpg", "../main/images/Dacia2.jpg", "../main/images/Dacia3.jpg"],
+        promo_image: "../main/images/Dacia1.jpg",
         marca_masina: "Dacia",
-        url_imagine: "../main/images/Dacia.jpg",
-        year: 2016,
-        price: 10000
+        year: 2020,
+        price: 13328,
+        km: 69000,
+        engine_displacement: 999,
+        power: 100,
+        phone_number: "0783997216",
+        location: "",
+        fakeDistanceFromUser: "",
+        lastUpdatedDate: "",
+        negotiable: ""
     },
     {
         objectId: 3,
-        marca_masina: "BMW",
-        url_imagine: "../main/images/BMW.jpg",
-        year: 2010,
-        price: 15000
+        anunt_titlu: "Lorem Ipsum is simply dummy text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        anunt_descriere: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        anunt_imagini: ["../main/images/Mitsubishi1.jpg", "../main/images/Mitsubishi2.jpg", "../main/images/Mitsubishi3.jpg"],
+        promo_image: "../main/images/Mitsubishi1.jpg",
+        marca_masina: "Mitsubishi",
+        year: 2009,
+        price: 19999,
+        km: 125726,
+        engine_displacement: 1998,
+        power: 450,
+        phone_number: "0781963753",
+        location: "",
+        fakeDistanceFromUser: "",
+        lastUpdatedDate: "",
+        negotiable: ""
     },
     {
         objectId: 4,
-        marca_masina: "Mitsubishi",
-        url_imagine: "../main/images/Mitsubishi1.jpg",
-        year: 2015,
-        price: 18000
+        anunt_titlu: "Lorem Ipsum is simply dummy text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        anunt_descriere: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        anunt_imagini: [],
+        promo_image: "../main/images/BMW4.jpg",
+        marca_masina: "BMW",
+        year: "",
+        price: "",
+        km: "",
+        engine_displacement: "",
+        power: "",
+        phone_number: "",
+        location: "",
+        fakeDistanceFromUser: "",
+        lastUpdatedDate: "",
+        negotiable: ""
     },
     {
         objectId: 5,
+        anunt_titlu: "Lorem Ipsum is simply dummy text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        anunt_descriere: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        anunt_imagini: [],
+        promo_image: "../main/images/Renault.jpg",
         marca_masina: "Renault",
-        url_imagine: "../main/images/Renault.jpg",
-        year: 2021,
-        price: 35000
+        year: "",
+        price: "",
+        km: "",
+        engine_displacement: "",
+        power: "",
+        phone_number: "",
+        location: "",
+        fakeDistanceFromUser: "",
+        lastUpdatedDate: "",
+        negotiable: ""
     },
     {
         objectId: 6,
+        anunt_titlu: "Lorem Ipsum is simply dummy text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        anunt_descriere: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        anunt_imagini: [],
+        promo_image: "../main/images/Lamborghini.jpg",
         marca_masina: "Lamborghini",
-        url_imagine: "../main/images/Lamborghini.jpg",
-        year: 2018,
-        price: 65000
+        year: "",
+        price: "",
+        km: "",
+        engine_displacement: "",
+        power: "",
+        phone_number: "",
+        location: "",
+        fakeDistanceFromUser: "",
+        lastUpdatedDate: "",
+        negotiable: ""
     },
     {
         objectId: 7,
+        anunt_titlu: "Lorem Ipsum is simply dummy text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        anunt_descriere: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        anunt_imagini: [],
+        promo_image: "../main/images/Ford.jpg",
         marca_masina: "Ford",
-        url_imagine: "../main/images/Ford.jpg",
-        year: 2000,
-        price: 80000
+        year: "",
+        price: "",
+        km: "",
+        engine_displacement: "",
+        power: "",
+        phone_number: "",
+        location: "",
+        fakeDistanceFromUser: "",
+        lastUpdatedDate: "",
+        negotiable: ""
     },
     {
         objectId: 8,
+        anunt_titlu: "Lorem Ipsum is simply dummy text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        anunt_descriere: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        anunt_imagini: [],
+        promo_image: "../main/images/Honda.jpg",
         marca_masina: "Honda",
-        url_imagine: "../main/images/Honda.jpg",
-        year: 2019,
-        price: 19500
+        year: "",
+        price: "",
+        km: "",
+        engine_displacement: "",
+        power: "",
+        phone_number: "",
+        location: "",
+        fakeDistanceFromUser: "",
+        lastUpdatedDate: "",
+        negotiable: ""
     },
     {
         objectId: 9,
-        marca_masina: "BMW",
-        url_imagine: "../main/images/BMW2.jpg",
-        year: 2005,
-        price: 45000
-    },
-    {
-        objectId: 10,
-        marca_masina: "Honda",
-        url_imagine: "../main/images/Honda.jpg",
-        year: 2022,
-        price: 21799
+        anunt_titlu: "Lorem Ipsum is simply dummy text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        anunt_descriere: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        anunt_imagini: [],
+        promo_image: "../main/images/Porsche.jpg",
+        marca_masina: "Porsche",
+        year: "",
+        price: "",
+        km: "",
+        engine_displacement: "",
+        power: "",
+        phone_number: "",
+        location: "",
+        fakeDistanceFromUser: "",
+        lastUpdatedDate: "",
+        negotiable: ""
     },
 ];
 
@@ -107,5 +193,8 @@ const marci = [
     },
     {
         marca_masina: "Nissan",
+    },
+    {
+        marca_masina: "Porsche"
     }
 ];
