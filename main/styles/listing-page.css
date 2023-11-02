@@ -4,7 +4,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -39,7 +39,7 @@ body {
     position: absolute;
     top: 25px;
     left: 95px;
-    font-weight:650;
+    font-weight: 650;
 }
 
 .phone-number {
@@ -279,8 +279,8 @@ body {
     width: 9rem;
     height: 4rem;
     position: absolute;
-    top: 181px;
-    left: 17px;
+    top: 180px;
+    left: 20px;
 }
 
 .numbertext {
@@ -314,3 +314,47 @@ body {
 .imageDots {
     text-align: center;
 }
+
+.locationWrapper {
+    width: 9rem;
+    height: 547px;
+    position: absolute;
+    top: 16rem;
+    left: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px #999
+}
+
+.carLocationText {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.location {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.distance {
+    background-color: #0F8E47;
+    width: 117px;
+    display: inline-block;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    height: 50px;
+    margin-bottom: 60px;
+}
+
+.distanceText {
+    padding: 8px 10px 0px 10px;
+}
+
+.lastUpdate {}
+
+.lastUpdateText {}
