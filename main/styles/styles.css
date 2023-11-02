@@ -145,7 +145,6 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    /* column-rule-color: #fc3336; */
 }
 
 .notification {
@@ -165,19 +164,3 @@ body {
 .objectId {
     display: none;
 }
-
-/* .relativeTest {
-    width: 800px;
-    height: 400px;
-    border: 2px solid red;
-    margin: 10rem;
-    position: relative;
-}
-
-.absoluteTest {
-    background-color: yellow;
-    width: 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
