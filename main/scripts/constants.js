@@ -7,19 +7,19 @@ const redirectUrls = {
 const anunturi = [
     {
         objectId: 1,
-        anunt_titlu: "Lorem Ipsum is simply dummy text Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-        anunt_descriere: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        anunt_titlu: "BMW Seria 7 730d xDrive",
+        anunt_descriere: "TVA included non-deductible, invoice is issued. Standard warranty 6 months up to 10000 km with possibility to extend up to 24 months! Only owner in Romania, import Germany in 2020 at 169000 km. Full BMW history, available, no investment required, the car is in impeccable condition. No traces of wear inside, impeccable condition. One more set of R18 wheels for the winter season. You can check on the series in the ad the full list of equipment. FREE delivery anywhere in Romania!",
         anunt_imagini: ["../main/images/BMW1.jpg", "../main/images/BMW2.jpg", "../main/images/BMW3.jpg"],
         promo_image: "../main/images/BMW2.jpg",
         marca_masina: "BMW",
         year: 2016,
-        price: 29990,
+        price: "$29.990",
         km: 215100,
         engine_displacement: 2993,
         power: 265,
         phone_number: "0755667899",
         location: "Otopeni, Romania",
-        fakeDistanceFromUser: "236km",
+        fakeDistanceFromUser: "236km from your location",
         lastUpdatedDate: "1 November 2023",
         negotiable: "true"
     },

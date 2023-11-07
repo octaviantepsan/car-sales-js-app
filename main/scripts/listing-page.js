@@ -22,6 +22,19 @@ function showInformation() {
     document.getElementById("anuntTitluText").innerHTML = listingData.anunt_titlu;
     document.getElementById("anuntDescriereText").innerHTML = listingData.anunt_descriere;
 
+    document.getElementById("location").innerHTML = listingData.location;
+    document.getElementById("distanceText").innerHTML = listingData.fakeDistanceFromUser;
+    document.getElementById("lastUpdateText").innerHTML = listingData.lastUpdatedDate;
+
+    document.getElementById("price").innerHTML = listingData.price;
+    if(listingData.negotiable == "false") {
+        document.getElementById("anuntPriceText").style.marginLeft = "64px";
+        document.getElementById("negotiable").innerHTML = "Not Negotiable";
+    }
+    else {
+        document.getElementById("negotiable").innerHTML = "Negotiable";
+    }
+    
     document.getElementById("Brand").innerHTML += `<span class="listingInfo">${listingData.marca_masina}</span>`;
     document.getElementById("Displacement").innerHTML += `<span class="listingInfo">${listingData.engine_displacement}</span>`;
     document.getElementById("Year").innerHTML += `<span class="listingInfo">${listingData.year}</span>`;
@@ -70,10 +83,16 @@ function createEventListeners() {
     })
 }
 
+function showHistory() {
+    $history = document.getElementById("page_history");
+    $history.innerHTML += `<span class="history_spacing">/</span><a class="history_link" href="listing-page.html">${listingData.anunt_titlu}</a>`;
+}
+
 if (listingData) {
     createEventListeners();
     showInformation();
     showSlides(slideIndex);
+    showHistory()
 }
 else {
     window.location.href = redirectUrls.error_page;

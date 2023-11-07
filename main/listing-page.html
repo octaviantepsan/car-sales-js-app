@@ -25,6 +25,10 @@
         </div>
     </div>
     
+    <div class="page_history" id="page_history">
+        <a class="home_link" href="index.html">Home</a>        
+    </div>
+
     <div class="returnbuttonWrapper" id="returnbuttonWrapper">
         <button class="returnButton" id="returnButton">
             &lt; Return
@@ -34,12 +38,12 @@
     <div class="locationWrapper">
         <div class="carLocationText">Car Location</div>
         <div class="gpsIconWrapper"><img src="../main/images/GPS-Icon.png"></div>
-        <div class="location">Tulcea, Romania</div>
+        <div class="location" id="location">Tulcea, Romania</div>
         <div class="distance">
-            <div class="distanceText">295 km from your location</div>
+            <div class="distanceText" id="distanceText">295 km from your location</div>
         </div>
         <div class="lastUpdate">Last updated on:</div>
-        <div class="lastUpdateText">25 October 2023</div>
+        <div class="lastUpdateText" id="lastUpdateText">25 October 2023</div>
     </div>
 
     <div class="listingInformation" id="listingInformation">
@@ -56,19 +60,19 @@
                 <p class="anuntTitluText" id="anuntTitluText"></p>
             </div>
             <div class="anuntDescriere">
-                <div class="descriereTitle">Description</div>
+                <div class="descriereTitle">Listing Description</div>
                 <p class="anuntDescriereText" id="anuntDescriereText"></p>
             </div>
             <div class="anuntPrice">
-                <div class="priceTitle">Price</div>
-                <div class="anuntPriceText">
-                    <span class="price">$13.900</span>
-                    <span class="spacing">|</span>
-                    <span class="negotiable">Negotiable</span>
+                <div class="priceTitle">Listing Price</div>
+                <div class="anuntPriceText" id="anuntPriceText">
+                    <span class="price" id="price">$13.900</span>
+                    <span class="price_spacing">|</span>
+                    <span class="negotiable" id="negotiable">Negotiable</span>
                 </div>
             </div>
             <div class="anuntSpecificatii">
-                <div class="specificatiiTitle">Specifications</div>
+                <div class="specificatiiTitle">Listing Specifications</div>
                 <table class="specificatii" id="specificatii">
                     <tr class="specs">
                         <td class="typeOfSpecs1" id="Brand">Brand: </td>
