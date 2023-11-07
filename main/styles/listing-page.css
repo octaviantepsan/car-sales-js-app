@@ -4,7 +4,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -319,7 +319,7 @@ body {
 
 .locationWrapper {
     width: 9rem;
-    height: 547px;
+    height: 550px;
     position: absolute;
     top: 16rem;
     left: 20px;
@@ -372,12 +372,6 @@ body {
     margin-right: 4px;
 }
 
-.home_link {
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-}
-
 .history_link {
     color: black;
     font-size: 20px;
@@ -389,5 +383,5 @@ body {
 }
 
 .history_link:hover {
-    color: rgb(65, 64, 64);
+    color: #404140;
 }

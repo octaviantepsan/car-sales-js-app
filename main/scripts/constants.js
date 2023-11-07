@@ -21,7 +21,7 @@ const anunturi = [
         location: "Otopeni, Romania",
         fakeDistanceFromUser: "236km from your location",
         lastUpdatedDate: "1 November 2023",
-        negotiable: "true"
+        negotiable: "false"
     },
     {
         objectId: 2,
